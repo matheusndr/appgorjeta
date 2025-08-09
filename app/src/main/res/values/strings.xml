@@ -1,16 +1,19 @@
 <resources>
-    <string name="app_name">App Gorjeta</string>
-    <string-array name="num_people">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
+    <string name="app_name">Tip Calculator</string>
+    <string name="summary_subtitle">see bellow the summary of your bill</string>
+    <string name="total_table">Total Table:</string>
+    <string name="number_of_people">Number of People:</string>
+    <string name="tip_percentage">Tip Percentage:</string>
+    <string name="total">TOTAL:</string>
+    <string name="refresh">Refresh</string>
+    <string name="main_subtitle">Fullfil the bellow fields</string>
+    <string name="total_amount_label">Type the table amount:</string>
+    <string name="total_amount_hint">$ 100.00</string>
+    <string name="Num_of_people">Num of people:</string>
+    <string name="Percentage_of_tip">Percentage of tip</string>
+    <string name="_10">10%</string>
+    <string name="_4">4</string>
+    <string name="Clean">Clean</string>
+    <string name="calculate">Calculate</string>
+
 </resources>
