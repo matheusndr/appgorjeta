@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.appgorjeta.databinding.ActivitySummaryBinding
+import java.text.NumberFormat
+import java.util.Locale
+import kotlin.math.max
 
 class SummaryActivity : AppCompatActivity() {
 
@@ -17,33 +20,37 @@ class SummaryActivity : AppCompatActivity() {
         binding = ActivitySummaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Recupera os dados da Intent AQUI, logo no início
-        val totalTable = intent.getFloatExtra("totalTable", 0.0f)
-        val numPeople = intent.getFloatExtra("numPeople", 0f)
+        // Recebe dados
+        val totalTable = intent.getFloatExtra("totalTable", 0f)
+        val numPeople  = intent.getFloatExtra("numPeople", 0f)
         val percentage = intent.getFloatExtra("percentage", 0f)
-        val totalAmount = intent.getFloatExtra("totalAmount", 0.0f)
+        val totalAmount = intent.getFloatExtra("totalAmount", 0f)
 
-        binding.tvPercentage.text = percentage.toString() + "%"
-        binding.tvTotalAmount.text = totalAmount.toString()
-        binding.tvTotalTable.text = totalAmount.toString()
-        binding.tvNumPeopleLabel.text = numPeople.toString()
+        // Calcula adicionais
+        val tipAmount = totalTable * (percentage / 100f)
+        val safePeople = max(1f, numPeople)
+        val amountPerPerson = totalAmount / safePeople
 
-
-        binding.btnRefresh.setOnClickListener {
-            finish()
+        // Formata moeda
+        fun formatCurrency(value: Float): String {
+            val fmt = NumberFormat.getCurrencyInstance(Locale.getDefault())
+            return fmt.format(value)
         }
 
+        // Preenche UI
+        binding.tvTotalTable.text = formatCurrency(totalTable)
+        binding.tvNumPeopleValue.text = numPeople.toInt().toString()
+        binding.tvPercentage.text = String.format(Locale.getDefault(), "%.0f%%", percentage)
+        binding.tvTipValue.text = formatCurrency(tipAmount)
+        binding.tvTotalAmount.text = formatCurrency(totalAmount)
+        binding.tvAmountPerPerson.text = formatCurrency(amountPerPerson)
 
-        println("Roquere1 $totalAmount")
+        binding.btnRefresh.setOnClickListener { finish() }
 
-        // Aplicação de padding conforme as insets do sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            val sb = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(sb.left, sb.top, sb.right, sb.bottom)
             insets
         }
     }
 }
-
-
-

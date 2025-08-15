@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".SummaryActivity">
 
+    <!-- Título -->
     <TextView
         android:id="@+id/text"
         style="@style/Title"
@@ -17,15 +18,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <!-- Subtítulo -->
     <TextView
         android:id="@+id/tv_subtitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
         android:text="@string/summary_subtitle"
-        app:layout_constraintStart_toStartOf="@id/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text"/>
 
+    <!-- Total bill -->
     <TextView
         android:id="@+id/tv_total_table_label"
         android:layout_width="wrap_content"
@@ -42,8 +47,9 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_total_table_label"
-        tools:text="R$ 250.00" />
+        tools:text="$100.00" />
 
+    <!-- Number of people -->
     <TextView
         android:id="@+id/tv_num_people_label"
         android:layout_width="wrap_content"
@@ -60,8 +66,9 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_num_people_label"
-        tools:text="5"/>
+        tools:text="4"/>
 
+    <!-- Tip percentage -->
     <TextView
         android:id="@+id/tv_percentage_label"
         android:layout_width="wrap_content"
@@ -78,20 +85,60 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_percentage_label"
-        tools:text="15%"/>
+        tools:text="10%"/>
 
+    <!-- Tip amount -->
+    <TextView
+        android:id="@+id/tv_tip_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/tip_value"
+        app:layout_constraintStart_toStartOf="@id/tv_percentage_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_percentage_label"/>
+
+    <TextView
+        android:id="@+id/tv_tip_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_tip_label"
+        tools:text="$10.00"/>
+
+    <!-- Per person -->
+    <TextView
+        android:id="@+id/tv_per_person_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/per_person"
+        app:layout_constraintStart_toStartOf="@id/tv_tip_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip_label" />
+
+    <TextView
+        android:id="@+id/tv_amount_per_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_per_person_label"
+        tools:text="$25.00" />
+
+    <!-- Separator -->
     <View
         android:id="@+id/separator"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="@color/black"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_percentage_label"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_per_person_label"/>
 
+    <!-- TOTAL -->
     <TextView
         android:id="@+id/tv_total_amount_label"
         android:layout_width="wrap_content"
@@ -106,13 +153,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:maxLength="5"
         android:textStyle="bold"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_total_amount_label"
-        tools:text="57.50" />
+        tools:text="$115.00" />
 
+    <!-- Botão -->
     <Button
         android:id="@+id/btn_refresh"
         android:layout_width="match_parent"
@@ -120,7 +167,7 @@
         android:layout_margin="16dp"
         android:text="@string/refresh"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

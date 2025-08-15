@@ -1,19 +1,37 @@
 <resources>
+    <!-- App -->
     <string name="app_name">Tip Calculator</string>
-    <string name="summary_subtitle">see bellow the summary of your bill</string>
-    <string name="total_table">Total Table:</string>
-    <string name="number_of_people">Number of People:</string>
-    <string name="tip_percentage">Tip Percentage:</string>
-    <string name="total">TOTAL:</string>
-    <string name="refresh">Refresh</string>
-    <string name="main_subtitle">Fullfil the bellow fields</string>
-    <string name="total_amount_label">Type the table amount:</string>
-    <string name="total_amount_hint">$ 100.00</string>
-    <string name="Num_of_people">Num of people:</string>
-    <string name="Percentage_of_tip">Percentage of tip</string>
-    <string name="_10">10%</string>
-    <string name="_4">4</string>
+
+    <!-- Botões -->
     <string name="Clean">Clean</string>
     <string name="calculate">Calculate</string>
+    <string name="refresh">Refresh</string>
 
+    <!-- Main -->
+    <string name="main_subtitle">Fill in the fields below</string>
+    <string name="total_amount_label">Bill amount:</string>
+    <string name="total_amount_hint">$ 100.00</string>
+    <string name="number_of_people">Number of people:</string>
+    <string name="Percentage_of_tip">Tip percentage:</string>
+
+    <!-- Summary -->
+    <string name="summary_subtitle">See your bill summary below</string>
+    <string name="total_table">Total bill:</string>
+    <string name="tip_percentage">Tip percentage:</string>
+    <string name="tip_value">Tip amount:</string>
+    <string name="total">TOTAL:</string>
+    <string name="per_person">Per person:</string>
+
+    <!-- Acessibilidade -->
+    <string name="icone_premio">award icon</string>
+
+    <!-- Mensagens de erro -->
+    <string name="error_total_amount">Please enter a valid bill amount.</string>
+    <string name="error_num_people">Please enter a valid number of people (at least 1).</string>
+    <string name="error_percentage">Please enter a valid tip percentage (0 or more).</string>
+
+    <!-- (compat) se ainda houver refs antigas em layouts -->
+    <string name="Num_of_people">Number of people:</string>
+    <string name="_4">4</string>
+    <string name="_10">10</string>
 </resources>

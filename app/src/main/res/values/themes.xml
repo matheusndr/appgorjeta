@@ -1,11 +1,20 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme -->
     <style name="Base.Theme.AppGorjeta" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
+        <!-- Cores principais -->
+        <item name="colorPrimary">@color/my_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/my_primary</item>
+        <item name="colorOnSecondary">@color/my_primary</item>
+
+        <!-- Fundo e barras do sistema -->
+        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
     </style>
 
     <style name="Theme.AppGorjeta" parent="Base.Theme.AppGorjeta" />
-    
+
     <style name="Title" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">32sp</item>
         <item name="android:textStyle">bold</item>
