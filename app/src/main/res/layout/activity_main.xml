@@ -14,8 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Subtítulo -->
@@ -23,30 +21,29 @@
         android:id="@+id/tv_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/main_subtitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
-    <!-- Label: valor da conta -->
+    <!-- Bill amount -->
     <TextView
         android:id="@+id/tv_hint_total_table"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="@string/total_amount_label"
         app:layout_constraintStart_toStartOf="@id/tv_subtitle"
         app:layout_constraintTop_toBottomOf="@id/tv_subtitle" />
 
-    <!-- Campo: valor da conta -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_total"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:hintEnabled="false"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-        app:hintEnabled="false"
+        app:errorEnabled="true"
         app:layout_constraintStart_toStartOf="@id/tv_hint_total_table"
         app:layout_constraintEnd_toEndOf="@id/tv_subtitle"
         app:layout_constraintTop_toBottomOf="@id/tv_hint_total_table">
@@ -62,24 +59,24 @@
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Label: número de pessoas -->
+    <!-- Number of people -->
     <TextView
         android:id="@+id/tv_hint_num_people"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/number_of_people"
         app:layout_constraintStart_toStartOf="@id/til_total"
         app:layout_constraintTop_toBottomOf="@id/til_total" />
 
-    <!-- Campo: número de pessoas -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_num_people"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:hintEnabled="false"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-        app:hintEnabled="false"
+        app:errorEnabled="true"
         app:layout_constraintStart_toStartOf="@id/tv_hint_num_people"
         app:layout_constraintEnd_toEndOf="@id/tv_subtitle"
         app:layout_constraintTop_toBottomOf="@id/tv_hint_num_people">
@@ -88,7 +85,7 @@
             android:id="@+id/tie_num_people"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="4"
+            android:hint="@string/_4"
             android:inputType="number"
             android:maxLength="3"
             android:paddingStart="0dp"
@@ -96,40 +93,86 @@
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Label: percentual -->
+    <!-- Tip percentage (label + valor atual do slider) -->
     <TextView
         android:id="@+id/tv_hint_percentage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/Percentage_of_tip"
         app:layout_constraintStart_toStartOf="@id/til_num_people"
         app:layout_constraintTop_toBottomOf="@id/til_num_people" />
 
-    <!-- Campo: percentual -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_percentage"
+    <TextView
+        android:id="@+id/tv_percentage_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10%"
+        app:layout_constraintTop_toTopOf="@id/tv_hint_percentage"
+        app:layout_constraintEnd_toEndOf="@id/tv_subtitle" />
+
+    <!-- Slider de porcentagem -->
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_percentage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:hintEnabled="false"
+        android:value="10"
+        android:valueFrom="0"
+        android:valueTo="100"
+        android:stepSize="1"
         app:layout_constraintStart_toStartOf="@id/tv_hint_percentage"
         app:layout_constraintEnd_toEndOf="@id/tv_subtitle"
-        app:layout_constraintTop_toBottomOf="@id/tv_hint_percentage">
+        app:layout_constraintTop_toBottomOf="@id/tv_hint_percentage" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tie_percentage"
+    <!-- Prévia ao vivo -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_preview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slider_percentage">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="10"
-            android:inputType="numberDecimal"
-            android:paddingStart="0dp"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <!-- Guideline vertical para dividir os botões -->
+            <TextView
+                android:id="@+id/tv_preview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/preview_title"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_preview_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                tools:text="Tip: $10.00" />
+
+            <TextView
+                android:id="@+id/tv_preview_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Total: $110.00" />
+
+            <TextView
+                android:id="@+id/tv_preview_per_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Per person: $27.50" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Guideline (para os botões) -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_guideline"
         android:layout_width="wrap_content"
@@ -137,20 +180,20 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <!-- Imagem acima dos botões -->
+    <!-- Imagem decorativa -->
     <ImageView
         android:id="@+id/img_award"
-        android:layout_width="228dp"
-        android:layout_height="195dp"
+        android:layout_width="180dp"
+        android:layout_height="112dp"
         android:layout_marginBottom="64dp"
         android:contentDescription="@string/icone_premio"
         android:src="@drawable/award_meal_24dp_e8eaed_fill0_wght400_grad0_opsz24"
         android:tint="#4CAF50"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_clean"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btn_clean" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Botão Clean (esquerda) -->
+    <!-- Botão Clean -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_clean"
         android:layout_width="155dp"
@@ -165,7 +208,7 @@
         app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <!-- Botão Calculate (direita) -->
+    <!-- Botão Calculate -->
     <Button
         android:id="@+id/btn_done"
         android:layout_width="0dp"
@@ -176,6 +219,7 @@
         android:backgroundTint="@color/green"
         android:text="@string/calculate"
         android:textColor="@android:color/white"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@id/vertical_guideline"
         app:layout_constraintEnd_toEndOf="@id/tv_subtitle"
         app:layout_constraintBottom_toBottomOf="parent" />

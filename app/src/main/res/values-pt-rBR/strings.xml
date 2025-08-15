@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Calculadora Gorjeta</string>
-    <string name="summary_subtitle">Veja o resumo da sua fatura abaixo</string>
-    <string name="total_table">Total mesa:</string>
-    <string name="number_of_people">Num de pessoas:</string>
-    <string name="tip_percentage">Porcentagem:</string>
-    <string name="total">TOTAL:</string>
-    <string name="refresh">Refazer</string>
-    <string name="main_subtitle">Preencha os campos abaixo para realizar o calculo da sua conta</string>
-    <string name="total_amount_label">Digite o valor da conta:</string>
-    <string name="total_amount_hint">Ex.: R$ 100.00</string>
-    <string name="Num_of_people">Número de pessoas:</string>
-    <string name="Percentage_of_tip">Porcentagem da gorjeta</string>
-    <string name="_10">Ex.: 10%</string>
-    <string name="_4">Ex.: 4</string>
+    <!-- App -->
+    <string name="app_name">Calculadora de Gorjetas</string>
+
+    <!-- Ações -->
     <string name="Clean">Limpar</string>
     <string name="calculate">Calcular</string>
+    <string name="refresh">Refazer</string>
+
+    <!-- Tela principal -->
+    <string name="main_subtitle">Preencha os campos abaixo</string>
+    <string name="total_amount_label">Digite o valor da conta:</string>
+    <string name="total_amount_hint">Ex.: R$ 100,00</string>
+    <string name="number_of_people">Número de pessoas:</string>
+    <string name="Percentage_of_tip">Porcentagem da gorjeta:</string>
+
+    <!-- Prévia ao vivo -->
+    <string name="preview_title">Prévia</string>
+    <string name="preview_tip">Gorjeta: %1$s</string>
+    <string name="preview_total">Total: %1$s</string>
+    <string name="preview_per_person">Por pessoa: %1$s</string>
+
+    <!-- Summary -->
+    <string name="summary_subtitle">Veja o resumo da sua conta abaixo</string>
+    <string name="total_table">Total da conta:</string>
+    <string name="tip_percentage">Porcentagem da gorjeta:</string>
+    <string name="tip_value">Valor da gorjeta:</string>
+    <string name="total">TOTAL:</string>
+    <string name="per_person">Por pessoa:</string>
+
+    <!-- Acessibilidade -->
+    <string name="icone_premio">ícone de prêmio</string>
+
+    <!-- Mensagens de erro -->
+    <string name="error_total_amount">Informe um valor de conta válido.</string>
+    <string name="error_num_people">Informe um número de pessoas válido (mínimo 1).</string>
+    <string name="error_percentage">Informe uma porcentagem de gorjeta válida (0 ou mais).</string>
+
+    <!-- Compatibilidade (se ainda houver refs antigas em layouts) -->
+    <string name="_10">Ex.: 10</string>
+    <string name="_4">Ex.: 4</string>
+    <string name="Num_of_people">Número de pessoas:</string>
 </resources>

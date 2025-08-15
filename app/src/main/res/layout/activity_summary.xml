@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".SummaryActivity">
 
-    <!-- Título -->
     <TextView
         android:id="@+id/text"
         style="@style/Title"
@@ -18,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Subtítulo -->
     <TextView
         android:id="@+id/tv_subtitle"
         android:layout_width="0dp"
@@ -66,7 +64,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_num_people_label"
-        tools:text="4"/>
+        tools:text="6"/>
 
     <!-- Tip percentage -->
     <TextView
@@ -85,7 +83,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_percentage_label"
-        tools:text="10%"/>
+        tools:text="20%"/>
 
     <!-- Tip amount -->
     <TextView
@@ -104,7 +102,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_tip_label"
-        tools:text="$10.00"/>
+        tools:text="$20.00"/>
 
     <!-- Per person -->
     <TextView
@@ -117,13 +115,13 @@
         app:layout_constraintTop_toBottomOf="@id/tv_tip_label" />
 
     <TextView
-        android:id="@+id/tv_amount_per_person"
+        android:id="@+id/tv_per_person"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_per_person_label"
-        tools:text="$25.00" />
+        tools:text="$20.00" />
 
     <!-- Separator -->
     <View
@@ -157,7 +155,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_total_amount_label"
-        tools:text="$115.00" />
+        tools:text="$120.00" />
 
     <!-- Botão -->
     <Button
@@ -169,5 +167,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
