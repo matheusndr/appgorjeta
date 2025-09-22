@@ -3,7 +3,7 @@
 A simple and modern Android application that helps you quickly calculate tips and split the bill with friends.  
 Designed with a clean interface inspired by iOS 18 and developed in **Kotlin** using **Android Studio**.
 
----
+
 
 ## ✨ Features
 
@@ -13,7 +13,7 @@ Designed with a clean interface inspired by iOS 18 and developed in **Kotlin** u
 * Support for **English** and **Portuguese**  
 * Modern UI with **Material 3** design  
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -24,8 +24,14 @@ Designed with a clean interface inspired by iOS 18 and developed in **Kotlin** u
 * **XML layouts** (for the user interface)  
 * **String resources** (for multi-language support: English and Portuguese)  
 
----
 
+
+## 📸 Screenshots
+
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/1c69f8bd-316f-4e6c-abf2-8b6a8ec2888b" width="250"/>
+  <img src="https://github.com/user-attachments/assets/9f97d60d-5107-4a16-a286-616cae3f0b72" width="250"/>
+</p>
 
 
 
