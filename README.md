@@ -1,7 +1,18 @@
 # Tip Calculator App
 
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white&style=for-the-badge)
+![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white&style=for-the-badge)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/matheusndr/appgorjeta?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/matheusndr/appgorjeta?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/matheusndr/appgorjeta?style=for-the-badge)
+
+
+
+## 📱 Overview
+
 A simple and modern Android application that helps you quickly calculate tips and split the bill with friends.  
-Designed with a clean interface inspired by iOS 18 and developed in **Kotlin** using **Android Studio**.
+Designed with a clean interface inspired by iOS 18 and developed in **Kotlin** using **Android Studio**.  
 
 
 
@@ -23,6 +34,15 @@ Designed with a clean interface inspired by iOS 18 and developed in **Kotlin** u
 * **Material 3** (Material Design for UI components)  
 * **XML layouts** (for the user interface)  
 * **String resources** (for multi-language support: English and Portuguese)  
+
+
+
+## 🚀 Getting Started
+
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/matheusndr/appgorjeta.git
+ 
 
 
 
