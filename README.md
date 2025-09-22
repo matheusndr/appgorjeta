@@ -1,3 +1,34 @@
+# Tip Calculator App
+
+A simple and modern Android application that helps you quickly calculate tips and split the bill with friends.  
+Designed with a clean interface inspired by iOS 18 and developed in **Kotlin** using **Android Studio**.
+
+---
+
+## ✨ Features
+
+* Calculate tip percentage based on the bill amount  
+* Option to split the bill between multiple people  
+* Real-time calculation with instant results  
+* Support for **English** and **Portuguese**  
+* Modern UI with **Material 3** design  
+
+---
+
+## 🛠️ Tech Stack
+
+* **Kotlin** (programming language)  
+* **Android SDK** (Android development framework)  
+* **Android Studio** (official IDE)  
+* **Material 3** (Material Design for UI components)  
+* **XML layouts** (for the user interface)  
+* **String resources** (for multi-language support: English and Portuguese)  
+
+---
+
+
+
+
 ## License
 ```
 The MIT License (MIT)
